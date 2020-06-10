@@ -20,7 +20,7 @@ class FocalLoss(_WeightedLoss):
 
     def softmax_loss(self, input, target):
         assert not target.requires_grad, \
-        "nn criterions don't compute the gradient w.r.t. targets - please " \ 
+        "nn criterions don't compute the gradient w.r.t. targets - please "  
         "mark these variables as volatile or not requiring gradients"
 
         fg_nums = target.data.gt(0).sum.item()
